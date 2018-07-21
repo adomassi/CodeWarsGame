@@ -1,0 +1,84 @@
+//square of given number
+using System;
+namespace CodeWarsGame.Models
+{
+    public class Hello {
+        public static void Main()
+        {
+            var input = int.Parse(Console.ReadLine());
+            Console.Write(input * input);
+        }
+    }
+}
+
+//fibonacci
+using System;
+namespace CodeWarsGame.Models
+{
+    public class Hello
+    {
+
+        public static int GetStr(int n)
+        {
+            int a = 0;
+            int b = 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                int temp = a;
+                a = b;
+                b = temp + b;
+            }
+            return a;
+        }
+
+        public static void Main()
+        {
+            var n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine(GetStr(i).ToString());
+            }
+        }
+    }
+}
+
+//find the factorial of a given number
+using System;
+class RecExercise9
+{
+    static void Main(string[] args)
+    {
+	
+        int n1 = Convert.ToInt32(Console.ReadLine());
+        long fact = FactorialCalcu(n1);
+        Console.WriteLine(fact);           
+        Console.ReadKey();
+    }
+
+    private static long FactorialCalcu(int n1)
+    {          
+        if (n1 == 0)
+        {
+            return 1;
+        }
+        return n1 * FactorialCalcu(n1-1);
+    }
+}
+
+//Display the n terms of odd natural number
+using System;  
+public class Exercise8  
+{  
+    public static void Main() 
+	{
+	   int i,n,sum=0;	   
+	   n= Convert.ToInt32(Console.ReadLine());     
+	   for(i=1;i<=n;i++)
+		   {
+			 Console.Write("{0} ",2*i-1);
+			 sum+=2*i-1;
+		   }   
+	  }
+}
